@@ -1,0 +1,47 @@
+
+// Program: Interstellar Alpha MT4
+// Developer: Forex Robot Easy Team
+// Developer's Site: forexroboteasy.com
+
+// Import necessary libraries
+#include <Trade\Trade.mqh>
+#include <Trade\PositionInfo.mqh>
+
+// Define the trading robot class
+class InterstellarAlphaMT4 : public CExpertAdvisor {
+private:
+   CTrade trade; // Trading operations object
+   CPositionInfo positionInfo; // Position information object
+
+public:
+   // Initialization function
+   void OnInit() {
+      // Set the trading account leverage
+      trade.SetLeverage(30);
+   }
+
+   // Execute the algorithm
+   void OnTick() {
+      // Get current account information
+      double accountBalance = AccountInfoDouble(ACCOUNT_BALANCE);
+      double accountEquity = AccountInfoDouble(ACCOUNT_EQUITY);
+
+      // Check if there are any open positions
+      if (positionInfo.Total() == 0) {
+         // Implement intelligent mathematical system for smart Forex trading
+         // Code goes here...
+         
+         // Implement code to protect capital through smart Forex trading
+         // Code goes here...
+      }
+      
+      // Implement Forex market analysis and risk management capabilities
+      // Code goes here...
+      
+      // Implement necessary trading functions to execute the algorithm
+      // Code goes here...
+   }
+};
+
+// Create an instance of the trading robot
+InterstellarAlphaMT4 interstellarAlphaMT4;
